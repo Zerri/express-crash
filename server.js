@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import posts from './routes/posts.js';
+import extraServices from './routes/extra-services.js';
 import logger from './middleware/logger.js';
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/notFound.js';
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/api/posts', posts);
+app.use('/api/extra-services', extraServices);
 
 // Error handler
 app.use(notFound);
