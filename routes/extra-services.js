@@ -1,18 +1,13 @@
 import express from 'express';
-import {
-  getExtraServices,
-  // getPost,
-  // createPost,
-  // updatePost,
-  // deletePost,
-} from '../controllers/extraServiceController.js';
+import { getExtraServices, getExtraServiceById } from '../controllers/extraServiceController.js';
+
 const router = express.Router();
 
-// Get all posts
+// Get all extra services
 router.get('/', getExtraServices);
 
-// Get single post
-// router.get('/:id', getPost);
+// Get single extra service
+router.get('/:id', getExtraServiceById);
 
 // Create new post
 // router.post('/', createPost);
