@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import posts from './routes/posts.js';
@@ -6,13 +7,25 @@ import extraServices from './routes/extra-services.js';
 import logger from './middleware/logger.js';
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/notFound.js';
+
 const port = process.env.PORT || 8000;
+const isDevelopment = true;
 
 // Get the directory name
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
+
+// Configura CORS solo in ambiente di sviluppo
+if (isDevelopment) {
+  app.use(cors({
+    origin: 'http://localhost:3000',  // Permetti solo richieste da localhost:3000
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: '*',
+  }));
+  console.log('🔓 CORS abilitato per localhost:3000');
+}
 
 // Body parser middleware
 app.use(express.json());
