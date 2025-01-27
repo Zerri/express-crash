@@ -6,6 +6,7 @@ import posts from './routes/posts.js';
 import extraServices from './routes/extra-services.js';
 import searchKB from './routes/search-kb.js';
 import ticketFormTemplateRoute from './routes/ticket-form-template.js'
+import contactReasonRoute from './routes/contact-reason.js';
 import logger from './middleware/logger.js';
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/notFound.js';
@@ -44,6 +45,7 @@ app.use('/api/posts', posts);
 app.use('/api/extraServices', extraServices);
 app.use('/api/AllProductLines/Result', searchKB);
 app.use('/api/Ticket/create/1/form', ticketFormTemplateRoute);
+app.use('/api/v1/ContactReason', contactReasonRoute);
 
 // Error handler
 app.use(notFound);
