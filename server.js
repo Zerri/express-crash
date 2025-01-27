@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/api/posts', posts);
-app.use('/api/extra-services', extraServices);
+app.use('/api/extraServices', extraServices);
 
 // Error handler
 app.use(notFound);
