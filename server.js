@@ -9,6 +9,7 @@ import ticketFormTemplateRoute from './routes/ticket-form-template.js'
 import contactReasonRoute from './routes/contact-reason.js';
 import operatingSystemRoute from './routes/operating-system.js';
 import priorityRoute from './routes/priority.js';
+import quadrupleProductLineRoute from './routes/quadruple-product-line.js';
 import logger from './middleware/logger.js';
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/notFound.js';
@@ -50,6 +51,7 @@ app.use('/api/Ticket/create/1/form', ticketFormTemplateRoute);
 app.use('/api/v1/ContactReason', contactReasonRoute);
 app.use('/api/v1/OperatingSystem', operatingSystemRoute);
 app.use('/api/v1/Priority', priorityRoute);
+app.use('/api/v1/Quadruple/ProductLine', quadrupleProductLineRoute);
 
 // Error handler
 app.use(notFound);
