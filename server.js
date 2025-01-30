@@ -10,6 +10,7 @@ import contactReasonRoute from './routes/contact-reason.js';
 import operatingSystemRoute from './routes/operating-system.js';
 import priorityRoute from './routes/priority.js';
 import quadrupleProductLineRoute from './routes/quadruple-product-line.js';
+import quadrupleProcedureRoute from './routes/quadruple-procedure.js';
 import logger from './middleware/logger.js';
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/notFound.js';
@@ -52,6 +53,7 @@ app.use('/api/v1/ContactReason', contactReasonRoute);
 app.use('/api/v1/OperatingSystem', operatingSystemRoute);
 app.use('/api/v1/Priority', priorityRoute);
 app.use('/api/v1/Quadruple/ProductLine', quadrupleProductLineRoute);
+app.use('/api/v1/Quadruple/Procedure', quadrupleProcedureRoute);
 
 // Error handler
 app.use(notFound);
