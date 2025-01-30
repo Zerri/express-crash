@@ -14,6 +14,7 @@ import quadrupleProcedureRoute from './routes/quadruple-procedure.js';
 import quadrupleAreaRoute from './routes/quadruple-area.js';
 import quadrupleModuleRoute from './routes/quadruple-module.js';
 import programModuleRoute from './routes/program-module.js';
+import procedureModuleRoute from './routes/procedure-module.js';
 import logger from './middleware/logger.js';
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/notFound.js';
@@ -60,6 +61,7 @@ app.use('/api/v1/Quadruple/Procedure', quadrupleProcedureRoute);
 app.use('/api/v1/Quadruple/Area', quadrupleAreaRoute);
 app.use('/api/v1/Quadruple/Module', quadrupleModuleRoute);
 app.use('/api/v1/Program/Module', programModuleRoute);
+app.use('/api/v1/Procedure/Module', procedureModuleRoute);
 
 // Error handler
 app.use(notFound);
