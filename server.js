@@ -12,6 +12,7 @@ import priorityRoute from './routes/priority.js';
 import quadrupleProductLineRoute from './routes/quadruple-product-line.js';
 import quadrupleProcedureRoute from './routes/quadruple-procedure.js';
 import quadrupleAreaRoute from './routes/quadruple-area.js';
+import quadrupleModuleRoute from './routes/quadruple-module.js';
 import logger from './middleware/logger.js';
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/notFound.js';
@@ -56,6 +57,7 @@ app.use('/api/v1/Priority', priorityRoute);
 app.use('/api/v1/Quadruple/ProductLine', quadrupleProductLineRoute);
 app.use('/api/v1/Quadruple/Procedure', quadrupleProcedureRoute);
 app.use('/api/v1/Quadruple/Area', quadrupleAreaRoute);
+app.use('/api/v1/Quadruple/Module', quadrupleModuleRoute);
 
 // Error handler
 app.use(notFound);
