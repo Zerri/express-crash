@@ -89,7 +89,7 @@ export const quadrupleAreaController = (req, res) => {
   const areaData = data[areaId];
 
   if (!areaData) {
-    return res.status(404).json({ message: `Area ID ${procedureId} not found` });
+    return res.status(404).json({ message: `Area ID ${areaId} not found` });
   }
 
   res.json(areaData);
