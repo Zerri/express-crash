@@ -50,8 +50,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/api/posts', posts);
-app.use('/api/extraServices', extraServices);
-app.use('/api/AllProductLines/Result', searchKB);
+app.use('/api/v1/extraServices', extraServices);
+app.use('/api/v1/AllProductLines/Result', searchKB);
 app.use('/api/v1/ContactReason', contactReasonRoute);
 app.use('/api/v1/OperatingSystem', operatingSystemRoute);
 app.use('/api/v1/Priority', priorityRoute);
