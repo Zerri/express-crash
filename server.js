@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 import posts from './routes/posts.js';
 import extraServices from './routes/extra-services.js';
 import searchKB from './routes/search-kb.js';
-import ticketFormTemplateRoute from './routes/ticket-form-template.js'
+import ticketRoute from './routes/ticket.js'
 import contactReasonRoute from './routes/contact-reason.js';
 import operatingSystemRoute from './routes/operating-system.js';
 import priorityRoute from './routes/priority.js';
@@ -52,7 +52,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/posts', posts);
 app.use('/api/extraServices', extraServices);
 app.use('/api/AllProductLines/Result', searchKB);
-app.use('/api/Ticket/create/1/form', ticketFormTemplateRoute);
 app.use('/api/v1/ContactReason', contactReasonRoute);
 app.use('/api/v1/OperatingSystem', operatingSystemRoute);
 app.use('/api/v1/Priority', priorityRoute);
@@ -62,6 +61,7 @@ app.use('/api/v1/Quadruple/Area', quadrupleAreaRoute);
 app.use('/api/v1/Quadruple/Module', quadrupleModuleRoute);
 app.use('/api/v1/Program/Module', programModuleRoute);
 app.use('/api/v1/Procedure/Module', procedureModuleRoute);
+app.use('/api/v1/Ticket', ticketRoute);
 
 // Error handler
 app.use(notFound);

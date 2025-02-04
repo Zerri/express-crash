@@ -1,3 +1,16 @@
+export const createTicketController = (req, res, next) => {
+  res.status(201).json(
+    {
+      "Timestamp":0,
+      "Obj":{id_ticket: "1234"},
+      "ResultType":2,
+      "ResultTypeString":"Info",
+      "Messages":[],
+      "ErrorFields":[]
+    }
+  );
+};
+
 export const ticketFormTemplateController = async (req, res) => {
   try {
     res.json({
