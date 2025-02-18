@@ -31,11 +31,11 @@ const app = express();
 // Configura CORS solo in ambiente di sviluppo
 if (isDevelopment) {
   app.use(cors({
-    origin: 'http://localhost:3000',  // Permetti solo richieste da localhost:3000
+    origin:  ['http://localhost:3000', 'http://localhost:5173'],
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: '*',
   }));
-  console.log('🔓 CORS abilitato per localhost:3000');
+  console.log('🔓 CORS abilitato per localhost:3000 e localhost:5173');
 }
 
 // Body parser middleware
