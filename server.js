@@ -31,7 +31,7 @@ const app = express();
 // Configura CORS solo in ambiente di sviluppo
 if (isDevelopment) {
   app.use(cors({
-    origin:  ['http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:5173', 'http://127.0.0.1:5173'],
+    origin:  ['http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:5173', 'http://127.0.0.1:5173', 'https://tsdesk-test.teamsystem.com'],
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: '*',
   }));
