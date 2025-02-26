@@ -31,11 +31,18 @@ const app = express();
 // Configura CORS solo in ambiente di sviluppo
 if (isDevelopment) {
   app.use(cors({
-    origin:  ['http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:5173', 'http://127.0.0.1:5173', 'https://tsdesk-test.teamsystem.com'],
+    origin: [
+      'http://localhost:3000', 
+      'http://127.0.0.1:3000', 
+      'http://localhost:5173', 
+      'http://127.0.0.1:5173', 
+      'https://tsdesk-test.teamsystem.com',
+      'https://orange-sand-02ea5eb03-preview.westeurope.4.azurestaticapps.net'
+    ],
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: '*',
   }));
-  console.log('🔓 CORS abilitato per localhost:3000 e localhost:5173');
+  console.log('🔓 CORS abilitato per localhost e domini consentiti');
 }
 
 // Body parser middleware
